@@ -1,0 +1,13 @@
+.default{
+  background-color:white;
+}
+.clicka{
+  background-color:blue;
+}
+.success{
+  background-color: greenyellow;
+}
+.nosuccess{
+  background-color: red;
+}
+

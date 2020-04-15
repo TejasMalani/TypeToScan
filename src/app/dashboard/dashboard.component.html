@@ -1,0 +1,25 @@
+
+<!-- <span class="pull-right">
+  <button type="button" class="btn btn-danger" (click)="clearAll()">Reset Data</button>
+</span> -->
+<div class="row col-sm-2" *ngFor="let item of data;index as i">
+
+
+
+  <button type="button"
+  [ngClass]="{'success':item.isValid=='success','nosuccess':item.isValid=='nosuccess','clicka':label === item.value,'default':item.isValid=='default'}"
+  style="width: 100px;margin-left: 20px;margin-top: 50px;" (click)="setData(item.value,i)">{{item.value}}</button>
+</div>
+<form #form="ngForm">
+<div class="row col-sm-12" style="margin-top: 50px;">
+
+  <span class="col-sm-2">
+    <input required type="text" name="userinput" class="form-control" id="userinput" #userInput autocomplete="off">
+  </span>
+
+  <span class="col-sm-2">
+    <button type="button" class="btn btn-default" [disabled]="!form.valid" (click)="checkData(userInput.value)">Submit</button>
+  </span>
+
+</div>
+</form>
